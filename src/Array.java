@@ -32,14 +32,20 @@ public class Array {
     }
 
 
-  /*
-    * Per modifiche future, attualmente ho evinto da StackOverflow che
+/*    * Per modifiche future, attualmente ho evinto da StackOverflow che
     * non e` cosi` scontato fare il sort di int primitivi in ordine
-    * discendente
+    * discendente*/
+
   public void sortDescending() {
-        Arrays.sort(array, Collections.reverseOrder());
+      sortAscending();
+      for( int i = 0; i < array.length/2; ++i )
+      {
+          int temp = array[i];
+          array[i] = array[array.length - i - 1];
+          array[array.length - i - 1] = temp;
+      }
+
     }
-*/
 
     public int occurrences(int n) {
         int occurrences = 0;
@@ -90,11 +96,13 @@ public class Array {
 
     /* TODO
     * metodo che restituisce un array con tutti gli elementi distinti dell’array
-    * Cosa diavolo vuole dire? Mica l'ho capito io
+    * Cosa diavolo vuole dire? Mica l'ho capito io. Pensavo fosse uguale a getArrayCopy()
     *
     * metodo sort che riordina in senso ascendente o discendente
      *
      * */
+
+
 
     private void expandArray() {
         array = Arrays.copyOf(array, array.length + 1);
