@@ -23,7 +23,7 @@ public class Main {
         array.add(6);
         System.out.println(array);
 
-        array.sortDescending();
+        array.sort(1);
         System.out.println(array);
 
     }
