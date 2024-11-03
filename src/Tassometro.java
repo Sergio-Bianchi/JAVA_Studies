@@ -26,7 +26,7 @@ public class Tassometro {
     }
 
 
-    double getTasse(Double importo) {
+    public double getTasse(Double importo) {
         double output = 0.0;
         double importoCache = importo;
         for (int i = 0; i < 3; i++) {
@@ -48,12 +48,14 @@ public class Tassometro {
 
     }
 
+    public double getSoglia(int soglia) {
+        return soglie[soglia+1];
+    }
 
-    /* TODO
-    * metodo getSoglia che dato un numero tra 1 e 3 restituisce la soglia
-    * metodo setsoglia che cambia una delle soglie.
-    *
-    * */
+    public void setSoglia(int soglia, double valore) {
+        soglie[soglia+1] = valore;
+    }
+
 
 
 }
