@@ -204,7 +204,7 @@ public class Array {
     /* === PRIVATE UTILS ===*/
 
     private void expandArray() {
-        int[] arrayCopy = new int[array.length];
+        int[] arrayCopy = new int[array.length+1];
         System.arraycopy(array, 0, arrayCopy, 0, array.length);
         array = arrayCopy;
     }

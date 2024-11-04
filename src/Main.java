@@ -1,3 +1,5 @@
+import java.util.Random;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -20,9 +22,13 @@ public class Main {
 
 
         Array array = new Array(new int[]{6,2,3});
-        array.add(6);
-        System.out.println(array);
 
+        for (int i = 0; i < 100; i++) {
+            array.add((int) (Math.random()*101));
+        }
+
+        array.quickSort(true);
+        System.out.println(array);
         array.quickSort();
         System.out.println(array);
 
