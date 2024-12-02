@@ -1,3 +1,5 @@
+import java.lang.String;
+
 public class Rettangolo {
     private int height = 0;
     private int width = 0;

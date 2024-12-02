@@ -1,4 +1,4 @@
-import java.nio.file.ClosedWatchServiceException;
+import java.lang.String;
 
 public class Array {
     int[] array;
@@ -178,7 +178,7 @@ public class Array {
             int pi = partition(low, high, reverse);
 
             quickSort(low, pi - 1, reverse);
-            quickSort(pi + 1, high, reverse);
+            quickSort(  pi + 1, high, reverse);
         }
     }
     public void quickSort(int low, int high) {
@@ -187,7 +187,7 @@ public class Array {
 
 
 
-        /*
+    /*
      * Sorts all the numbers in the array in ascending order
      * */
     public void quickSort() {
