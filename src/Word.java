@@ -7,7 +7,7 @@ import java.lang.String;
  * */
 public class Word {
     private long occurrences;
-    private String word;
+    private final String word;
 
     /**
      * @return the number of occurrences
@@ -30,19 +30,6 @@ public class Word {
         return getWord();
     }
 
-    /** Change the content of the Word
-     * @param word      The new word
-     */
-    public void setWord(String word) {
-        this.word = word;
-    }
-
-    /** Set the number of occurrences of the Word
-     * @param occurrences   The new number of occurrences
-     * */
-    public void setOccurrences(long occurrences) {
-        this.occurrences = occurrences;
-    }
 
     /** Add an occurrence to the Word
      */
